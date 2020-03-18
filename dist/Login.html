@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../dani-react/src/Musica.css"/>
+    <script src="../src/index.js"></script>
+</head>
+<body>
+<header class="row"  id="header" style="background-color: black">
+    <div>
+        <nav>
+            <ul>
+                <li>
+                    <button type="button">
+
+                        <img src="" height="35" width="35" alt="logo"/></button>
+                </li>
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="#">Crear
+                        Cuenta</a></li>
+                <li>
+                    <button type="submit" style="font-size: 21px;
+    float: right; ">
+                        <a >¿Desea
+                            buscar?</a></button>
+                </li>
+                <li style="margin-left: 30px;">
+                    <label><input type="text" placeholder="Usuario..." name="userl" id="userl"></label>
+                </li>
+                <li style="margin-left: 15px;">
+                    <label><input type="password" placeholder="Contraseña..." name="passwordl" id="passwordl"></label>
+                </li>
+                <li>
+                    <button type="submit" value="Submit"><a
+                            onclick="loggeo()">Hecho</a>
+                    </button>
+                </li>
+                <li>
+                    <button type="submit" value="Submit"><a
+                          >Error404</a>
+                    </button>
+                </li>
+
+
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <form name="registro">
+
+        <div class="col-md-6">
+            <div class="row">
+                <h1 style="background-color:white;     margin-left: 300px;">Creación de cuenta</h1>
+            </div>
+            <div class="row">
+                <label style="font-size: 30px;     margin-top: 100px;
+    margin-left: 300px;"> <b>Usuario:</b> <input type="text" placeholder="Usuario" style="margin-left: 150px;"
+                                                 name="user" id="user"> </label>
+            </div>
+            <div class="row">
+                <div>
+                    <label style="font-size: 30px;
+                   margin-left: 300px;"> <b>Contraseña:</b> <input type="password" placeholder="Contraseña"
+                                                                   style="margin-left: 100px;" name="password"
+                                                                   id="password"> </label>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label style="font-size: 30px;
+    margin-left: 300px;"> <b>Repetir contraseña:</b> <input type="password" placeholder="Repetir Contraseña"
+                                                            name="passwordr" id="passwordr"> </label>
+                </div>
+            </div>
+            <div class="row">
+                <label style="font-size: 30px;
+    margin-left: 300px;"> <b>Correo electrónico:</b> <input type="text" placeholder="Correo electrónico" name="email"
+                                                            id="email">
+                </label>
+            </div>
+            <div class="row">
+                <a href="#" class="btn btn-primary btn-lg active" id="boton" role="button" aria-pressed="true"
+                   style="font-size: 21px; margin-left: 375px;  margin-top: 30px" onclick="obtenerdatos();">All
+                    right!</a>
+                <button class="btn btn-primary btn-lg active"
+                        type="button" style="font-size: 21px; margin-left: 375px;  margin-top: 30px"
+                        onclick="mostrar()">¿Olvidaste tu contraseña?
+                </button>
+            </div>
+        </div>
+
+        <div class="col-md-6" id="cambiar">
+            <div class="">
+                <h1 style="background-color:white;     margin-left: 300px;">Nueva contraseña</h1>
+            </div>
+            <div class="row">
+                <label style="font-size: 30px;     margin-top: 100px;
+    margin-left: 300px;"> <b>Usuario:</b> <input type="text" placeholder="Usuario" style="margin-left: 150px;"
+                                                 name="userc" id="userc"> </label>
+            </div>
+            <div class="row">
+                <div>
+                    <label style="font-size: 30px;
+                   margin-left: 300px;"> <b>Contraseña:</b> <input type="password" placeholder="Contraseña"
+                                                                   style="margin-left: 100px;" name="passwordc"
+                                                                   id="passwordc"> </label>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label style="font-size: 30px;
+    margin-left: 300px;"> <b>Repetir contraseña:</b> <input type="password" placeholder="Repetir Contraseña"
+                                                            name="passwordrc" id="passwordrc"> </label>
+                </div>
+            </div>
+            <div class="row">
+                <label style="font-size: 30px;
+    margin-left: 300px;"> <b>Correo electrónico:</b> <input type="text" placeholder="Correo electrónico" name="emailc"
+                                                            id="emailc">
+                </label>
+            </div>
+            <div class="row">
+                <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"
+                   style="font-size: 21px; margin-left: 375px;  margin-top: 30px"
+                   onclick="changePassword()">¡Cambiar!</a>
+                <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"
+                   style="font-size: 21px; margin-left: 375px;  margin-top: 30px" onclick="ocultar()">¡Guardar!</a>
+
+            </div>
+        </div>
+
+
+        <aside class="col-md-6" id="guardar">
+            <div class="">
+                <div class="row">
+                    <label style="font-size: 30px;     margin-top: 100px;
+    margin-left: 300px;"> <input type="text" placeholder="Usuario" style="margin-left: 0;"
+                                 name="usera" id="usera"> </label>
+                </div>
+                <div class="row">
+                    <div>
+                        <label style="font-size: 30px;
+                   margin-left: 300px;"> <input type="password" placeholder="Contraseña"
+                                                style="margin-left: 0;" name="passworda" id="passworda">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <label style="font-size: 30px;
+    margin-left: 300px;"><input type="text" placeholder="Correo electrónico" name="emaila" id="emaila">
+                    </label>
+                </div>
+            </div>
+        </aside>
+    </form>
+
+
+</main>
+<script type="text/javascript">
+
+    //OBTIENE DATOS DEL LABEL 0 Y LOS PASA A A, TAMBIEN COMPRUEBA CONTRASEÑAS
+    function obtenerdatos() {
+        let user = document.getElementById('user').value;
+        let password = document.getElementById('password').value;
+        let email = document.getElementById('email').value;
+        if (document.getElementById('password').value === document.getElementById('passwordr').value) {
+            alert("Cuenta creada");
+            document.registro.usera.value = user;
+            document.registro.passworda.value = password;
+            document.registro.emaila.value = email;
+        } else {
+            alert("Contraseñas diferentes, mire que las haya escrito bien");
+        }
+    }
+    //CAMBIA LAS CONTRASEÑAS A ALGUNA QUE PRIMERO COINCIDA CON USU Y EMAIL, PARA CAMBIAR A CONTRA, CAMBIA VALOR DE C A A
+
+    function changePassword() {
+        if (document.getElementById('usera').value === document.getElementById('userc').value && document.getElementById('emaila').value === document.getElementById('emailc').value) {
+            let passwordc = document.getElementById("passwordc").value;
+
+
+            if (document.getElementById('passwordc').value === document.getElementById('passwordrc').value) {
+                alert("Contraseñas cambiadas");
+                document.registro.passworda.value = passwordc;
+            } else {
+                alert("Contraseñas diferentes, mire que haya escrito bien la repetición")
+            }
+        } else {
+            console.log("Incorrecto, paquete")
+        }
+    }
+    //FUNCIONES PARA QUE NO SE MUESTREN LOS INPUTS TANTO EL QUE RECOGE DATOS COMO EL DECAMBIAR CONTRA
+    function mostrar() {
+        document.getElementById("cambiar").style.display = "block";
+    }
+
+    function ocultar() {
+        document.getElementById("cambiar").style.display = "none";
+    }
+
+    //INTENTO DE LOGGEO PERO SOLO FUNCIONA EN LA PRIMERA PÁGINA HAY QUE ENCONTRAR SOL, preguntar profe
+    function loggeo() {
+        if ((document.getElementById('userl').value === document.getElementById('usera').value && document.getElementById('passwordl').value === document.getElementById('passworda').value)) {
+            alert("Ha iniciado sesión como " + "  " + document.getElementById('usera').value);
+
+        } else {
+            alert("La contraseña o el usuario no coinciden. Pruebe de nuevo");
+        }
+    }
+</script>
+
+<style type="text/css">
+    #guardar {
+        display: none;
+    }
+
+    #cambiar {
+        display: none;
+    }
+</style>
+</body>
+</html>
